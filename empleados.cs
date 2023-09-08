@@ -34,5 +34,41 @@ namespace EMPRESA
         {
             DATA.DataSource = tabla;
         }
+
+        public void ver(ComboBox COMBO)
+        {
+            COMBO.DisplayMember = "Nombre";
+            COMBO.ValueMember = "DNI";
+            COMBO.DataSource = tabla;
+        }
+
+        public void ver(ListBox lb) 
+        {
+            lb.DisplayMember = "Nombre";
+            lb.ValueMember = "DNI";
+            lb.DataSource = tabla;
+        }
+        public void ver2(DataGridView DATA)
+        {
+            DATA.Columns.Clear();
+            DATA.Columns.Add("C1" , "DNI");
+            DATA.Columns.Add("C2" , "DNI");
+
+            foreach (DataRow fila in tabla.Rows) 
+            {
+                DATA.Rows.Add(fila["dni"], fila["Nombre"]);
+            }
+        }
+        public void ver(DataGridView DATA, int Sector)
+        {
+            DATA.Rows.Clear();
+           foreach(DataRow fila in tabla.Rows) 
+           {
+                if (fila["Sector"].ToString() == Sector.ToString()) 
+                {
+                    DATA.Rows.Add(fila["dni"], fila["Nombre"], fila["Sueldo"]);
+                }
+            }
+        }
     }
 }

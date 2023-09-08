@@ -16,7 +16,7 @@ namespace EMPRESA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Empresa());
+            Application.Run(new Form4());
         }
     }
 }

@@ -22,5 +22,21 @@ namespace EMPRESA
             empleados oEmpleados = new empleados();
             oEmpleados.ver(DATA);
         }
+
+        private void DATA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 Formulario2 = new Form2();
+            Formulario2.Show();
+        }
     }
 }
